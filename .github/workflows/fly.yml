@@ -13,7 +13,7 @@ jobs:
       run: |
        chmod +x ./scripts/checkmachine.sh
        ./scripts/checkmachine.sh
-    shell: bash
+      shell: bash
   deploy:
     name: Deploy app
     runs-on: ubuntu-latest
