@@ -20,7 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl deploy --remote-only
+      - uses: actions/setup-go@v4
+        with:
+          go-version: '^1.21.1' # The Go version to download (if necessary) and use.
+      - uses: superfly/flyctl@feat-add-label-to-images
+      - run: go run . deploy --remote-only
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
