@@ -20,9 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Runfile 
-      run: |
-         chmod +x ./flycuddl
-         ./flycuddl status
+      - run: |
+         chmod +x ./flycuddle
+         ./flycuddle status
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
