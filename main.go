@@ -8,5 +8,9 @@ import (
 func main() {
 	fmt.Println("reading GH SHAS")
 	GH := os.Getenv("GITHUB_SHA")
-	fmt.Println(GH)
+	EVENT := os.Getenv("GITHUB_EVENT_NAME")
+	Actions := os.Getenv("GITHUB_ACTIONS")
+	fmt.Printf("Is using actions:%s", Actions)
+	fmt.Printf("With the following event:%s", EVENT)
+	fmt.Printf("With the following sha %s", GH)
 }
