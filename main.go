@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println("reading GH SHAS")
+	fmt.Println("reading GH INFO:")
 	GH := os.Getenv("GITHUB_SHA")
 	EVENT := os.Getenv("GITHUB_EVENT_NAME")
 	Actions := os.Getenv("GITHUB_ACTIONS")

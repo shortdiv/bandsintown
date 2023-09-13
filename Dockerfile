@@ -5,6 +5,8 @@ ARG NODE_VERSION=20.2.0
 FROM node:${NODE_VERSION}-slim as base
 
 LABEL fly_launch_runtime="Next.js"
+LABEL fly_gh_sha="d4600e4ed756910ea943f63cb48a26751a5ce576"
+LABEL fly_gh_event_name="push"
 
 # Next.js app lives here
 WORKDIR /app
